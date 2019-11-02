@@ -1,0 +1,41 @@
+@import '../utils';
+// sass-lint:disable no-transition-all
+
+.hero-avatar {
+  width: 1.5rem;
+}
+
+.ra-skull {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-gray;
+  }
+}
+
+th,
+td {
+  text-align: center;
+}
+
+th {
+  &:nth-of-type(2) {
+    text-align: left;
+  }
+}
+
+td {
+  &:nth-of-type(2) {
+    text-align: left;
+  }
+}
+
+.table-row-enter-active,
+.table-row-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.table-row-enter,
+.table-row-leave-to {
+  opacity: 0;
+}

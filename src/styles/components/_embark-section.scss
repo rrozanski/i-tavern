@@ -1,0 +1,19 @@
+@import '../utils';
+
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+[class^='col-'] {
+  text-align: center;
+}
+
+.note {
+  margin: 1rem 0;
+  color: $color-gray;
+  font-size: 80%;
+  font-style: italic;
+  font-weight: 400;
+ }

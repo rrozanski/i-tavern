@@ -1,0 +1,50 @@
+@import '../utils';
+// sass-lint:disable no-transition-all
+
+@media (max-width: 575px) {
+  .hero {
+    width: 3rem;
+  }
+
+  .dragon {
+    width: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    width: 5rem;
+  }
+
+  .dragon {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    width: 10rem;
+  }
+
+  .dragon {
+    width: 30rem;
+  }
+}
+
+.hero-enter-active {
+  transition: all 1s ease;
+}
+
+.hero-enter {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.dragon-enter-active {
+  transition: all 5s ease;
+}
+
+.dragon-enter {
+  transform: translateX(50px);
+  opacity: 0;
+}

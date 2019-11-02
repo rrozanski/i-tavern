@@ -1,0 +1,30 @@
+@import './styles/fonts';
+@import './styles/utils';
+@import './styles/imports';
+// sass-lint:disable no-transition-all
+// sass-lint:disable no-ids
+
+#app {
+  color: $primary-color;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// sass-lint:disable no-important
+.btn-dark {
+  border-radius: 2px !important;
+}
+
+.ra-skull {
+  color: $primary-color;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s ease-in-out;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(0.75rem);
+  opacity: 0;
+}

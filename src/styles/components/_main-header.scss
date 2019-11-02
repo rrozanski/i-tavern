@@ -1,0 +1,43 @@
+@import '../utils';
+
+.header {
+  @media (min-width: 768px) {
+    height: 12.5rem;
+  }
+  height: 10rem;
+  background: url('../assets/images/dark_wood.png');
+  color: $color-white;
+  font-family: 'Grenze', serif;
+  box-shadow: 0 5px 5px -2px $color-gray;
+  -webkit-box-shadow: 0 5px 5px -2px $color-gray;
+  -moz-box-shadow: 0 5px 5px -2px $color-gray;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .title {
+      @media (min-width: 768px) {
+        font-size: 5rem;
+      }
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .logo {
+      @media (min-width: 768px) {
+        width: 10rem;
+      }
+      width: 5rem;
+    }
+  }
+}
