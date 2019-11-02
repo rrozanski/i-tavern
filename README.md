@@ -13,21 +13,21 @@ Sample application prepared for Vue workshop.
 
 1. Download empty application from repository:
 
-   ```console
+   ```
    git clone git@github.com:rrozanski/i-tavern.git
    ```
    or
-   ```html
+   ```
    git clone https://github.com/rrozanski/i-tavern.git
    ```
 2. Install dependencies:
 
-   ```console
+   ```
    npm install
    ```
 3. Run application:
 
-   ```console
+   ```
    npm run serve
    ```
 4. Open browser on url:
@@ -53,7 +53,7 @@ completed-app
 
 ## Example data for the hero list
 
-```json
+```
 [
     {
         id: 1,
