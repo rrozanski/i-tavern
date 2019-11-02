@@ -58,8 +58,7 @@
         },
         methods: {
             embark() {
-                // tslint:disable no-console
-                console.log('Adventure!');
+                this.$router.push({ name: 'adventure' });
             }
         }
     });

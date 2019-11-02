@@ -1,47 +1,44 @@
 <template>
-  <div class="lead text-center">
-    Adventure!
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <transition name="hero">
+          <img
+              v-if="showFighter"
+              src="assets/images/dwarf-helmet.svg"
+              alt=""
+              class="hero">
+        </transition>
+      </div>
+      <div>
+        <transition name="hero">
+          <img
+              v-if="showRogue"
+              src="assets/images/hood.svg"
+              alt=""
+              class="hero">
+        </transition>
+      </div>
+      <div>
+        <transition name="hero">
+          <img
+              v-if="showWizard"
+              src="assets/images/wizard-face.svg"
+              alt=""
+              class="hero">
+        </transition>
+      </div>
+    </div>
+    <div class="col-6 text-right">
+      <transition name="dragon">
+        <img
+            v-if="showDragon"
+            src="assets/images/spiked-dragon-head.svg"
+            alt=""
+            class="dragon">
+      </transition>
+    </div>
   </div>
-<!--  <div class="row">-->
-<!--    <div class="col-6">-->
-<!--      <div>-->
-<!--        <transition name="hero">-->
-<!--          <img-->
-<!--              v-if="showFighter"-->
-<!--              src="assets/images/dwarf-helmet.svg"-->
-<!--              alt=""-->
-<!--              class="hero">-->
-<!--        </transition>-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <transition name="hero">-->
-<!--          <img-->
-<!--              v-if="showRogue"-->
-<!--              src="assets/images/hood.svg"-->
-<!--              alt=""-->
-<!--              class="hero">-->
-<!--        </transition>-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <transition name="hero">-->
-<!--          <img-->
-<!--              v-if="showWizard"-->
-<!--              src="assets/images/wizard-face.svg"-->
-<!--              alt=""-->
-<!--              class="hero">-->
-<!--        </transition>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="col-6 text-right">-->
-<!--      <transition name="dragon">-->
-<!--        <img-->
-<!--            v-if="showDragon"-->
-<!--            src="assets/images/spiked-dragon-head.svg"-->
-<!--            alt=""-->
-<!--            class="dragon">-->
-<!--      </transition>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
 
 <script lang="ts">

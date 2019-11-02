@@ -5,7 +5,9 @@
         :subtitle="subtitle"></MainHeader>
 
     <div class="container my-5">
-      <router-view></router-view>
+      <transition name="slide-fade">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
