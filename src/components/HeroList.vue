@@ -54,12 +54,26 @@
         There are no heroes in your party.
       </div>
       <party-summary :heroes="heroes"></party-summary>
+      <div class="text-right mt-5">
+        <button
+            @click="createHero"
+            type="button"
+            class="btn btn-lg btn-dark">
+          <i class="ra ra-player-thunder-struck"></i>
+          Create a Hero
+        </button>
+      </div>
     </div>
+
+    <new-hero-form
+        @add-hero="addHero"
+        :show-new-hero-form.sync="showNewHeroForm"></new-hero-form>
   </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue';
+    import NewHeroForm from '@/components/NewHeroForm.vue';
     import PartySummary from '@/components/PartySummary.vue';
     import { HeroClass } from '@/enums';
     import { Hero } from '@/models/hero.model';
@@ -67,6 +81,7 @@
     export default Vue.extend({
         name: 'HeroList',
         components: {
+            NewHeroForm,
             PartySummary
         },
         props: {
@@ -81,6 +96,9 @@
             };
         },
         methods: {
+            addHero(data: Hero) {
+                this.heroes.push(data);
+            },
             getAvatarUrl(heroClass: HeroClass): string {
                 const baseUrl = '../assets/images/';
 
@@ -101,6 +119,9 @@
                 if (confirmation) {
                     this.$emit('remove-hero', heroId);
                 }
+            },
+            createHero(): void {
+                this.showNewHeroForm = true;
             }
         }
     });
