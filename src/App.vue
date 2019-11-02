@@ -1,12 +1,26 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <MainHeader
+        :title="title"
+        :subtitle="subtitle"></MainHeader>
+  </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue';
+    import MainHeader from '@/components/MainHeader.vue';
 
     export default Vue.extend({
-        name: 'App'
+        name: 'App',
+        components: {
+            MainHeader
+        },
+        data() {
+            return {
+                title: 'iTavern',
+                subtitle: 'Stay awhile and listen!'
+            };
+        }
     });
 </script>
 
