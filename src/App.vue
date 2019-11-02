@@ -3,6 +3,10 @@
     <MainHeader
         :title="title"
         :subtitle="subtitle"></MainHeader>
+
+    <div class="container my-5">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
