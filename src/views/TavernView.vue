@@ -5,11 +5,15 @@
           @remove-hero="removeHero($event)"
           :heroes="heroes"></HeroList>
     </div>
+    <div class="col-12">
+      <EmbarkSection :heroes="heroes"></EmbarkSection>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue';
+    import EmbarkSection from '@/components/EmbarkSection.vue';
     import HeroList from '@/components/HeroList.vue';
     import { Gender, HeroClass, Race } from '@/enums';
     import { Hero } from '@/models';
@@ -17,6 +21,7 @@
     export default Vue.extend({
         name: 'TavernView',
         components: {
+            EmbarkSection,
             HeroList
         },
         data() {
